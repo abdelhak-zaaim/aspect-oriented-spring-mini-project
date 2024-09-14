@@ -18,4 +18,18 @@ public class LoggingAspect {
       System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
       return proceed;
    }
+
+
+   // This method is used to log the execution time of the methods that are annotated with @LogExecutionTime
+   @Around("@annotation(com.zaaim.aop.anotations.LogExecutionTime)")
+   public Object logExecutionTimeForMethods(ProceedingJoinPoint joinPoint) throws Throwable {
+      long start = System.currentTimeMillis();
+
+      Object proceed = joinPoint.proceed();
+
+      long executionTime = System.currentTimeMillis() - start;
+      System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
+
+      return proceed;
+   }
 }
