@@ -9,4 +9,5 @@ Aspect-Oriented Programming (AOP) in Spring enables developers to separate cross
 To get started with this project, follow these steps:
 1. Clone this repository:
    ```bash
-   cd spring-aop-tutorial
+   https://github.com/abdelhak-zaaim/aspect-oriented-spring-mini-project
+   cd aspect-oriented-spring-mini-project
